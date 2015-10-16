@@ -5,9 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AlunoController {
-	@RequestMapping("/a")
+	@RequestMapping("/")
 	public String teste(){
-		System.out.println("aqui");
-		return "teste";
+		return "index";
 	}
 }
