@@ -3,7 +3,7 @@ package rj.handschool.model;
 import java.util.ArrayList;
 
 public class Professor {
-	private long matricula;
+	private Long matricula;
 	private Titulacao titulacao;
 	private String nome;
 	private int telefone;

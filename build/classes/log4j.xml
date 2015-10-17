@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="br.snc.tcc">
+	<logger name="rj.handschool">
 		<level value="info" />
 	</logger>
 	

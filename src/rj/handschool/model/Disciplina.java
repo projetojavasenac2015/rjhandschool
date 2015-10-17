@@ -1,6 +1,7 @@
 package rj.handschool.model;
 
 public class Disciplina {
-	private long id;
+	private Long id;
 	private String nome;
+	private int qntAulas;
 }
