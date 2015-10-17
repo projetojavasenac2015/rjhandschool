@@ -12,7 +12,7 @@
 <meta name="author" content="HandSchool">
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Insert title here</title>
+<title>Hand School</title>
 <spring:url value="resourcers/js/libs/jquery-1.10.0.min.js" var="jquerymin" />
 <spring:url value="resourcers/js/libs/jquery-ui.min.js" var="jquery-ui" />
 <spring:url value="resourcers/js/libs/bootstrap.min.js" var="bootstrap" />
@@ -80,6 +80,49 @@ jQuery(document).ready(function ($) {
                     </div>
                 </div>
             </div>
+		 	<div class="divider"></div>
+		 	<div class="">
+		 		<div class="row">
+                    <div class="col-sm-10">
+                        <div class="dropdown-wrap boxed-velvet" style="margin-bottom:20px;">
+                             <ul class="dropdown inner clearfix">
+                                <li><a href="#"><span>Home</span></a></li>
+                                <li><a href="#"><span>Gerenciador</span></a>
+                                    <ul>
+                                        <li><a href="#">Aluno</a></li>
+                                        <li><a href="#">Turmas</a>
+                                        	<ul>
+		                                        <li><a href="CadastramentoTurma">Inclusão</a></li>
+		                                        <li><a href="CadastramentoTurma">Todas as turmas</a></li>
+		                                    </ul>
+                                        </li>
+                                        <li><a href="CadastramentoMateria">Matérias</a></li>
+                                        <li><a href="#">Conteúdo</a>
+                                            <ul>
+                                                <li><a href="#">X</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span>Plano de Aula</span></a></li>
+                                <li><a href="#"><span>Frequencia</span></a></li>
+                                <li><a href="#"><span>Lançamento de Notas</span></a>
+                                    <ul>
+                                        <li><a href="#">X</a>
+                                            <ul>
+                                                <li><a href="#">X</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 tagcloud margin-10">
+                        <a href="#" class="tag-link-1" title="2 topics" hidefocus="true" style=""><span>Solicitacoes</span></a>
+                    </div>
+                </div>
+            </div> 
 		</div>
 	</div>
 </body>
