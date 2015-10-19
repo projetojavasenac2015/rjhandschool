@@ -12,7 +12,7 @@
 <title>Nova Turma</title>
 </head>
 <body>
-	<c:import url="../index.jsp"/>
 	
+	teste
 </body>
 </html>
