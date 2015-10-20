@@ -9,37 +9,45 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Matérias</title>
+<title>Disciplina</title>
+<script>
+	jQuery(document).ready(function(){
+		jQuery('#conteudo').chosen({ width: "100%" });
+	})
+</script>
 </head>
 <body>
 	<c:import url="../index.jsp"/>
 	<div class="body_wrap">
-	<div class="row">
-		<div class="col-sm-5">
-			<h6 class="foo">Matérias</h6>
-			<div class="add-comment add-comment-velvet styled" id="addcomments">
-            	<div class="add-comment-title"><h3>Novo/Edição</h3></div>
-               	<div class="comment-form">
-                    <form action="#" method="post" id="commentForm" class="ajax_form">
-                         <div class="form-inner">
-                            <div class="field_text">
-                                <label for="contact_name" class="label_title">Name:</label>
-                            </div>
-                            <div class="field_text">
-                                <label for="subject" class="label_title">Subject:</label>
-                                <input type="text" name="subject" id="subject" value="" placeholder="Hello, Mike!" class="inputtext input_middle required" />
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="rowSubmit">
-                            <a onclick="document.getElementById('commentForm').reset();return false" href="#" class="link-reset btn btn-black"><span>Discard</span></a>
-                            <span class="btn btn-send"><input type="submit" id="send" value="Send Message" /></span>
-                        </div>
-                    </form>
-                </div>
-            </div>	
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="add-comment add-comment-velvet styled" id="addcomments">
+		            	<div class="add-comment-title"><h3>Nova Disciplina</h3></div>
+		               	<div class="comment-form">
+		                    <form action="#" method="post" id="commentForm" class="ajax_form">
+		                         <div class="form-inner">
+		                            <div class="field_text">
+		                                <label for="contact_name" class="label_title">Disciplina:</label>
+		                                <input type="text" name="disciplina" id="disciplina" value="" class="inputtext input_middle required" />
+		                            </div>
+	                             	<div class="field_select">
+		                                <label for="conteudo" class="label_title">Conteúdo:</label>
+		                                <select name="conteudo" id="conteudo" multiple data-placeholder="Adicione o Conteúdo">
+                                            <option value='example1@gmail.com'>conteúdo</option>
+                                        </select>
+                                    </div>
+		                            <div class="clear"></div>
+		                        </div>
+		                        <div class="rowSubmit">
+		                            <span class="btn btn-small"><input type="submit" id="send" value="Confirmar" /></span>
+		                        </div>
+		                    </form>
+		                </div>
+		            </div>	
+				</div>
+			</div>
 		</div>
-	</div>
 	</div>
 </body>
 </html>

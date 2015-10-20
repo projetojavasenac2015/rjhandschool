@@ -5,6 +5,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,12 +14,16 @@
 <meta name="author" content="HandSchool">
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hand School</title>
+<title>
+	Hand School
+	<tiles:insertAttribute name="title"/>
+</title>
 <spring:url value="resourcers/js/libs/jquery-1.10.0.min.js" var="jquerymin" />
 <spring:url value="resourcers/js/libs/jquery-ui.min.js" var="jquery-ui" />
 <spring:url value="resourcers/js/libs/bootstrap.min.js" var="bootstrap" />
 <spring:url value="resourcers/js/general.js" var="general" />
 <spring:url value="resourcers/js/cusel-min.js" var="cusel" />
+<spring:url value="resourcers/js/jquery.chosen.min.js" var="jselec" />
 <spring:url value="resourcers/css/jquery-ui-1.8.20.custom.css" var="cssJquery" />
 <spring:url value="resourcers/css/bootstrap.css" var="cssBoot" />
 <spring:url value="resourcers/css/cusel.css" var="cssCusel" />
@@ -28,12 +34,16 @@
 <script src="${bootstrap}"></script>
 <script src="${general}"></script>
 <script src="${cusel}"></script>
+<script src="${jselec}"></script>
 <link href="${cssJquery}" rel="stylesheet">
 <link href="${cssBoot}" rel="stylesheet">
 <link href="${cssCusel}" rel="stylesheet">
 <link href="${persona}" rel="stylesheet">
 <script>
 jQuery(document).ready(function ($) {
+
+	$("#principal").removeAttr("style");
+	
     var daysRange = 5;
 
     function assignCalendar(id) {
@@ -54,12 +64,12 @@ jQuery(document).ready(function ($) {
 </script>
 </head>
 <body>
-	<div class="body_wrap">
-		<div class="container">
+	<div class="body_wrap" id="principal">
+		<div class="container" >
 			<div class="content" role="main">
                 <div class="row">
                     <div class="col-sm-3">
-                        <h2 class="foo">HAND SCHOOL</h2>
+                        <h2 class="foo"><a haref="/">HAND SCHOOL</a></h2>
                     </div>
                     <div class="col-sm-9">
                         <div class="widget-container widget_search boxed-velvet">
@@ -122,8 +132,9 @@ jQuery(document).ready(function ($) {
                         <a href="#" class="tag-link-1" title="2 topics" hidefocus="true" style=""><span>Solicitacoes</span></a>
                     </div>
                 </div>
-            </div> 
+            </div>
 		</div>
 	</div>
+	
 </body>
 </html>
