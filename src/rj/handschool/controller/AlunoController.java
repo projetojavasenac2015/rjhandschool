@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AlunoController {
-	@RequestMapping("/")
+	@RequestMapping("/aluno")
 	public String teste(){
 		return "index";
 	}

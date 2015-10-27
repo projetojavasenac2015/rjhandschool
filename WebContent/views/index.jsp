@@ -16,7 +16,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>
 	Hand School
-	<tiles:insertAttribute name="title"/>
 </title>
 <spring:url value="resourcers/js/libs/jquery-1.10.0.min.js" var="jquerymin" />
 <spring:url value="resourcers/js/libs/jquery-ui.min.js" var="jquery-ui" />
