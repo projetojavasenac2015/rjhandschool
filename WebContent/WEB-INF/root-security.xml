@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:p="http://www.springframework.org/schema/p" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+   <security:http auto-config="true" use-expressions="true" >
+		
+		<!-- <security:intercept-url pattern="/login*" access="ROLE_USER,ROLE_ADMIN" />
+		<security:intercept-url pattern="/listaUsuario*" access="ROLE_USER" />
+		<security:intercept-url pattern="/cadUsuario*" access="ROLE_ADMIN" />
+	    -->
+	    <security:intercept-url pattern="/menuPortal"  access="isAuthenticated()"/>
+        <security:intercept-url pattern="/menuInicial"  access="isAuthenticated()"/>
+		<security:form-login 
+		                login-page="/loginForm" 
+		                default-target-url="/menuPortal"
+			            authentication-failure-url="/loginError" 
+			            password-parameter="senha"
+                        username-parameter="matricula"
+			            />
+		
+		<security:logout logout-success-url="/logout" invalidate-session="true" />
+	    
+	    <security:access-denied-handler error-page="/403"/>  
+	</security:http> 
+
+    <security:authentication-manager>
+	  <security:authentication-provider>
+			<security:jdbc-user-service data-source-ref="dataSource"
+			role-prefix="ROLE_"
+			users-by-username-query="SELECT A.EMAIL AS username, A.SENHA AS  password, A.ATIVO as enable  FROM LOGIN A WHERE A.EMAIL = ?"
+            authorities-by-username-query="SELECT A.EMAIL AS username , B.NOME  AS authority FROM LOGIN A JOIN PERFIL B ON A.IDPERFIL = B.IDPERFIL WHERE A.EMAIL = ?"
+			/>	    
+	  </security:authentication-provider>
+	</security:authentication-manager>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+		<!-- localhost(127.10.80.130:3306) é o servidor no openshift -->
+		<property name="url" value="jdbc:mysql://localhost:3306/portal" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="username" value="portal" />
+		<property name="password" value="portal" />
+	</bean>
+<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+		localhost(127.10.80.130:3306) é o servidor no openshift
+		<property name="url" value="jdbc:mysql://127.11.5.130:3306/portalaluno" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="username" value="adminYlgM1xC" />
+		<property name="password" value="5V-YbVDQGvA9" />
+	</bean> -->	
+</beans>
+
