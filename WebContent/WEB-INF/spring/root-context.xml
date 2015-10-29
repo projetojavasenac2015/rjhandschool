@@ -11,7 +11,7 @@
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
-	<context:component-scan base-package="br.senac" />
+	<context:component-scan base-package="rj.handschool" />
 
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -33,7 +33,7 @@
 
 		<property name="packagesToScan">
 			<list>
-				<value>br.senac.modelo</value>
+				<value>rj.handschool.model</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

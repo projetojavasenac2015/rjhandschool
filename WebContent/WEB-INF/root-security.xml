@@ -17,16 +17,16 @@
 	    <security:intercept-url pattern="/menuPortal"  access="isAuthenticated()"/>
         <security:intercept-url pattern="/menuInicial"  access="isAuthenticated()"/>
 		<security:form-login 
-		                login-page="/loginForm" 
-		                default-target-url="/menuPortal"
-			            authentication-failure-url="/loginError" 
+		                login-page="/login" 
+		                default-target-url="/index"
+			            authentication-failure-url="/error" 
 			            password-parameter="senha"
                         username-parameter="matricula"
 			            />
 		
 		<security:logout logout-success-url="/logout" invalidate-session="true" />
 	    
-	    <security:access-denied-handler error-page="/403"/>  
+	    <security:access-denied-handler error-page="/error"/>  
 	</security:http> 
 
     <security:authentication-manager>
@@ -41,10 +41,10 @@
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
 		<!-- localhost(127.10.80.130:3306) é o servidor no openshift -->
-		<property name="url" value="jdbc:mysql://localhost:3306/portal" />
+		<property name="url" value="jdbc:mysql://localhost:3306/rjhandschool" />
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="username" value="portal" />
-		<property name="password" value="portal" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
 	</bean>
 <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
 		localhost(127.10.80.130:3306) é o servidor no openshift
