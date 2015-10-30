@@ -24,15 +24,15 @@ public class LoginDAO {
 		return (Login) getSession().get(Login.class, id);	
 	}
 	
-	public Login findByMatricula(String matricula) throws Exception {
+	public Login findByEmail(String email) throws Exception {
 		try {
 			return (Login)	getSession().createCriteria(Login.class)
-					.add(Restrictions.eq("matricula", matricula)).uniqueResult();
+					.add(Restrictions.eq("email", email)).uniqueResult();
 
 			
 			
 		}catch(Exception e){
-	     throw new Exception("Erro ao Procurar Login por Matricula: "+e.getMessage());
+	     throw new Exception("Erro ao Procurar Login por E-mail: "+e.getMessage());
 		}
 	}
 	

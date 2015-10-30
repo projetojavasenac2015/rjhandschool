@@ -22,32 +22,32 @@ public class LoginController {
 	 @Autowired  
 	private LoginService loginService;
 	
-	@RequestMapping(value={ "/","loginForm"},method=RequestMethod.GET)
+	@RequestMapping(value={ "/","login"},method=RequestMethod.GET)
 	public String loginForm(){
-		return "login/login-form";		
+		return "login/login";		
 	}
 	
 	@RequestMapping(value="loginError",method=RequestMethod.GET)
 	public String loginError(Model model,HttpServletRequest request){
 		model.addAttribute("error", getErrorMessage(request, "SPRING_SECURITY_LAST_EXCEPTION"));
-		return "login/login-form";		
+		return "login/error";		
 	}
 	
 	@RequestMapping("logout")
 	public String logout(HttpSession session){		
 		session.invalidate();
-		return "redirect:loginForm";
+		return "redirect:login";
 	}
 	
 	@RequestMapping("acessoNegado")
 	public String acessoNegado(){
-		return "403";
+		return "error";
 	}
 	
 	@RequestMapping("menuPortal")
 	public String menuPrimeiroAcesso(Principal principal, HttpSession session) throws Exception{
-		String matricula = principal.getName();
-		session.setAttribute("LoginAtivo", loginService.findByMatricula(matricula));	
+		String email = principal.getName();
+		session.setAttribute("LoginAtivo", loginService.findByEmail(email));	
 		return "menu/menu-portal";
 	}
 	
@@ -63,7 +63,7 @@ public class LoginController {
 			
 			String error = "";
 			if (exception instanceof BadCredentialsException) {
-				error = "Matricula e/ou Senha Inválida!";
+				error = "E-mail e/ou Senha Inválida!";
 			}else if(exception instanceof LockedException) {
 				error = exception.getMessage();
 			}else{

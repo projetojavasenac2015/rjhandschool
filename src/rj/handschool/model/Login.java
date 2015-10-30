@@ -16,9 +16,6 @@ import javax.persistence.TemporalType;
 @Entity
 public class Login implements Serializable {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -26,8 +23,8 @@ public class Login implements Serializable {
 	@Column(name="IDLOGIN")
 	private Integer idLogin;
 	
-	@Column(name="MATRICULA",length=30,nullable=false)
-	private String matricula;
+	@Column(name="EMAIL",length=30,nullable=false)
+	private String email;
 	
 	@Column(name="ATIVO",nullable=false)
 	private Boolean ativo;
@@ -58,10 +55,10 @@ public class Login implements Serializable {
 		this.idLogin = idLogin;
 	}
 	public String getMatricula() {
-		return matricula;
+		return email;
 	}
 	public void setMatricula(String matricula) {
-		this.matricula = matricula;
+		this.email = matricula;
 	}
 	public Boolean isAtivo() {
 		return ativo;
@@ -125,7 +122,7 @@ public class Login implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Login [idLogin=" + idLogin + ", matricula=" + matricula
+		return "Login [idLogin=" + idLogin + ", email=" + email
 				+ ", ativo=" + ativo + ", dataHoraCadastro=" + dataHoraCadastro
 				+ ", senha=" + senha + ", dataUltimaAtualizacao="
 				+ dataUltimaAtualizacao + ", perfil=" + perfil + ", pessoa="

@@ -16,6 +16,6 @@ public interface LoginService {
 	 */
 	public List<Login> findAll();
 	public Login findById(Integer id);
-	public Login findByMatricula(String matricula) throws Exception; 
+	public Login findByEmail(String email) throws Exception; 
 
 }

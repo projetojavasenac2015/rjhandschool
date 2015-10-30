@@ -40,8 +40,8 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Transactional(readOnly=true)
-	public Login findByMatricula(String matricula) throws Exception {
-		Login l = loginDAO.findByMatricula(matricula);
+	public Login findByEmail(String email) throws Exception {
+		Login l = loginDAO.findByEmail(email);
 		return l;
 	}
 

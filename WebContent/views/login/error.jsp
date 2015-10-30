@@ -12,7 +12,7 @@
 				<div align="center">					
 					<br/>
 					<a href="menu.jsp">
-						<img src="../resourcers/img/erro.jpg" style="width: 988px; height: 493px">
+						<img src="/resourcers/img/erro.jpg" style="width: 988px; height: 493px">
 					</a>
 				</div>
 		</div>
