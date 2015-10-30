@@ -40,8 +40,8 @@
    						<form:form action="login" commandName="login" method="post" id="login_forme" class="ajax_form">
 							<div class="form-inner">
 							    <div class="field_text">
-							        <label for="usuario" class="label_title">Usuário:</label>
-							        <input type="text" name="usuario" id="usuario" value="" placeholder="usuario@handscholl.com" class="inputtext input_middle required" />
+							        <label for="usuario" class="label_title">E-mail:</label>
+							        <input type="text" name="email" id="email" value="" placeholder="e-mail@handschool.com" class="inputtext input_middle required" />
 							    </div>
 							    <div class="field_text">
 							        <label for="subject" class="label_title">Senha:</label>

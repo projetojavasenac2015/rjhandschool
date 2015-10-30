@@ -9,6 +9,7 @@
   <param-value>/WEB-INF/spring/root-context.xml,
 			/WEB-INF/root-security.xml</param-value>
  </context-param>
+ 
  <!-- Spring Security -->
  <filter>
   <filter-name>springSecurityFilterChain</filter-name>
@@ -18,6 +19,7 @@
   <filter-name>springSecurityFilterChain</filter-name>
   <url-pattern>/*</url-pattern>
  </filter-mapping>
+ 
  <!-- Creates the Spring Container shared by all Servlets and Filters -->
  <listener>
   <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -46,7 +48,7 @@
   <auth-method>CLIENT-CERT</auth-method>
   <form-login-config>
    <form-login-page>/views/login/login.jsp</form-login-page>
-   <form-error-page>/views/error.jsp</form-error-page>
+   <form-error-page>/views/login/error.jsp</form-error-page>
   </form-login-config>
  </login-config>
 </web-app>

@@ -23,14 +23,14 @@ public class LoginController {
 	private LoginService loginService;
 	
 	@RequestMapping(value={ "/","login"},method=RequestMethod.GET)
-	public String loginForm(){
-		return "login/login";		
+	public String login(){
+		return "login";		
 	}
 	
 	@RequestMapping(value="loginError",method=RequestMethod.GET)
 	public String loginError(Model model,HttpServletRequest request){
 		model.addAttribute("error", getErrorMessage(request, "SPRING_SECURITY_LAST_EXCEPTION"));
-		return "login/error";		
+		return "error";		
 	}
 	
 	@RequestMapping("logout")

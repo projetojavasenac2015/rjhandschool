@@ -17,11 +17,11 @@
 	    <security:intercept-url pattern="/menuPortal"  access="isAuthenticated()"/>
         <security:intercept-url pattern="/menuInicial"  access="isAuthenticated()"/>
 		<security:form-login 
-		                login-page="./login/login" 
+		                login-page="/login" 
 		                default-target-url="/index"
-			            authentication-failure-url="./login/error" 
+			            authentication-failure-url="/error" 
 			            password-parameter="senha"
-                        username-parameter="matricula"
+                        username-parameter="email"
 			            />
 		
 		<security:logout logout-success-url="/logout" invalidate-session="true" />
