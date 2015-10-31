@@ -6,7 +6,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>
+	Titulo da pagina
+</title>
 <spring:url value="resourcers/js/libs/jquery-1.10.0.min.js" var="jquerymin" />
 <spring:url value="resourcers/js/libs/jquery-ui.min.js" var="jquery-ui" />
 <spring:url value="resourcers/js/libs/bootstrap.min.js" var="bootstrap" />
@@ -33,6 +35,6 @@
 
 </head>
 <body>
-<h1>teste</h1>
+<h1>Teste Jsp</h1>
 </body>
 </html>
