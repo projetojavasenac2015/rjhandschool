@@ -4,7 +4,7 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
     <definition name="principal"
-        template="/WebContent/index.jsp">
+        template="/views/index.jsp">
         <put-attribute name="title" value="teste" />
         <put-attribute name="body" value="" />
     </definition>

@@ -16,6 +16,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>
 	Hand School
+	<tiles:getAsString name="title"></tiles:getAsString>
 </title>
 <spring:url value="resourcers/js/libs/jquery-1.10.0.min.js" var="jquerymin" />
 <spring:url value="resourcers/js/libs/jquery-ui.min.js" var="jquery-ui" />
@@ -40,8 +41,6 @@
 <link href="${persona}" rel="stylesheet">
 <script>
 jQuery(document).ready(function ($) {
-
-	$("#principal").removeAttr("style");
 	
     var daysRange = 5;
 

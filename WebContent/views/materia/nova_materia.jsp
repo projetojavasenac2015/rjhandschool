@@ -17,7 +17,6 @@
 </script>
 </head>
 <body>
-	<c:import url="../index.jsp"/>
 	<div class="body_wrap">
 		<div class="container">
 			<div class="row">

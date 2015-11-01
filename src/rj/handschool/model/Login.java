@@ -40,10 +40,9 @@ public class Login implements Serializable {
 	@Column(name="DATA_ULT_ATUALIZACAO",nullable=false)
 	private Calendar dataUltimaAtualizacao;
 
-	@OneToOne
-	@JoinColumn(name="IDPERFIL",referencedColumnName="idPerfil")
-	private Perfil perfil;
-
+	@Column(name="TIPO_LOGIN",length=40,nullable=false)
+	private TipoLogin tipoLogin;
+	
 	@OneToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="IDPESSOA",referencedColumnName="idPessoa")
 	private Pessoa pessoa;
@@ -84,17 +83,19 @@ public class Login implements Serializable {
 	public void setDataUltimaAtualizacao(Calendar dataUltimaAtualizacao) {
 		this.dataUltimaAtualizacao = dataUltimaAtualizacao;
 	}
-	public Perfil getPerfil() {
-		return perfil;
-	}
-	public void setPerfil(Perfil perfil) {
-		this.perfil = perfil;
-	}
+	
 	public Pessoa getPessoa() {
 		return pessoa;
 	}
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
+	}
+	
+	public TipoLogin getTipoLogin() {
+		return tipoLogin;
+	}
+	public void setTipoLogin(TipoLogin tipoLogin) {
+		this.tipoLogin = tipoLogin;
 	}
 
 	@Override
@@ -125,7 +126,7 @@ public class Login implements Serializable {
 		return "Login [idLogin=" + idLogin + ", email=" + email
 				+ ", ativo=" + ativo + ", dataHoraCadastro=" + dataHoraCadastro
 				+ ", senha=" + senha + ", dataUltimaAtualizacao="
-				+ dataUltimaAtualizacao + ", perfil=" + perfil + ", pessoa="
+				+ dataUltimaAtualizacao + ", tipoLogin=" + tipoLogin + ", pessoa="
 				+ pessoa + "]";
 	}
 	

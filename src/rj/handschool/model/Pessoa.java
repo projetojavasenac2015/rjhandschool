@@ -47,8 +47,7 @@ public class Pessoa implements Serializable {
 	@OneToMany(mappedBy="pessoa")
 	private List<Login> logins;
 	
-	
-	 public List<Login> getLogins() {
+	public List<Login> getLogins() {
 		return logins;
 	}
 	public void setLogins(List<Login> logins) {

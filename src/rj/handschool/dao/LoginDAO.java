@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 
 import rj.handschool.model.Login;
 
-
 @Repository
 public class LoginDAO {
 

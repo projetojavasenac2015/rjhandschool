@@ -6,10 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import rj.handschool.dao.AcessoDAO;
 import rj.handschool.dao.LoginDAO;
 import rj.handschool.service.LoginService;
-import rj.handschool.model.Acesso;
 import rj.handschool.model.Login;
 
 @Service
