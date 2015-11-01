@@ -7,6 +7,9 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,10 +17,11 @@
 <meta name="author" content="HandSchool">
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<tiles:insertDefinition name="principal" />
 <title>
-	Hand School
 	<tiles:getAsString name="title"></tiles:getAsString>
 </title>
+
 <spring:url value="resourcers/js/libs/jquery-1.10.0.min.js" var="jquerymin" />
 <spring:url value="resourcers/js/libs/jquery-ui.min.js" var="jquery-ui" />
 <spring:url value="resourcers/js/libs/bootstrap.min.js" var="bootstrap" />
@@ -41,6 +45,8 @@
 <link href="${persona}" rel="stylesheet">
 <script>
 jQuery(document).ready(function ($) {
+
+	$("#principal").removeAttr("style");
 	
     var daysRange = 5;
 
@@ -62,6 +68,7 @@ jQuery(document).ready(function ($) {
 </script>
 </head>
 <body>
+	
 	<div class="body_wrap" id="principal">
 		<div class="container" >
 			<div class="content" role="main">
