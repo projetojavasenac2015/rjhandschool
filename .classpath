@@ -39,7 +39,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-tx-4.0.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web-4.0.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-4.0.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tiles-api-3.0.5.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tiles-api-3.0.5.jar" sourcepath="C:/Users/Renan/.m2/repository/org/apache/tiles/tiles-api/3.0.5/tiles-api-3.0.5-sources.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tiles-autotag-core-runtime-1.1.0.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tiles-compat-3.0.5.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tiles-core-3.0.5.jar"/>
@@ -60,5 +60,27 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tiles-template-3.0.5.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tiles-velocity-3.0.5.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
