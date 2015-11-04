@@ -40,8 +40,5 @@
  </welcome-file-list>
  <login-config>
   <auth-method>CLIENT-CERT</auth-method>
-  <form-login-config>
-   <form-login-page>/views/login/login.jsp</form-login-page>
-  </form-login-config>
  </login-config>
 </web-app>
